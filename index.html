@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odontólogo</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Tu contenido va acá -->
+
+  <header class="bg-primary text-white p-3 text-center">
+  <h1>Dr. Juan Pérez</h1>
+  <p>Especialista en Odontología General</p>
+</header>
+
+<section class="hero text-center p-5">
+  <h2>Bienvenido a nuestra clínica</h2>
+  <p>Tratamientos modernos y personalizados</p>
+  <a href="#contacto" class="btn btn-success">Agendar Cita</a>
+</section>
+
+<section id="contacto" class="p-5 bg-light">
+  <div class="container">
+    <h3>Contacto</h3>
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Bootstrap JS (opcional, para modales, dropdowns, etc) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
