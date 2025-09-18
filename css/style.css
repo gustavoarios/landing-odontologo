@@ -11,11 +11,14 @@ body {
     padding: 0;
 }
 
+
+
 /* ===========================
    Header / Navbar
 =========================== */
 header {
-    background-color: #f9f6f1; /* <- este es el color que querés */
+    background-color: #f9f6f1;
+    /* <- este es el color que querés */
     color: #000000;
     padding: 0;
     text-align: center;
@@ -24,26 +27,46 @@ header {
     z-index: 1030;
 }
 
+.menu-centrado {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 100%;
+}
+
 /* Navbar interno, opcional si querés más control */
 header .navbar {
-    background-color: transparent; /* ya lo pintamos en el header */
+    background-color: transparent;
+    /* ya lo pintamos en el header */
 }
 
 /* Navbar centrado */
 header .navbar-collapse {
-    justify-content: center !important; /* centra horizontalmente los links */
+    justify-content: center !important;
+    /* centra horizontalmente los links */
 }
 
 /* Opcional: espacio entre links */
 header .navbar-nav .nav-item {
-    margin: 0 1rem; /* ajusta el espacio entre links */
+    margin: 0 0.2rem;
+    /* ajusta el espacio entre links */
 }
 
 /* Logo del header */
 header .navbar-brand img {
-    max-height: 70px;
     /* tamaño del logo */
+    max-height: 60px;
+    padding-left: 4rem;
+    /*CON ESTO MOVEMOS EL LOGO EN SENTIDO HORIZONTAL*/
+
+
+
 }
+
+/*colores*/
+/*color nombre profesional: #065a5c*/
+/*color logo diente: #8474A1*/
 
 /* Links del header */
 header .nav-link {
@@ -51,7 +74,9 @@ header .nav-link {
     font-weight: 500;
     color: #065a5c;
     transition: color 0.3s;
-    font-size: 1.2rem; /* <- ajusta este valor al tamaño que quieras */;
+    font-size: 1.2rem;
+    /* <- ajusta este valor al tamaño que quieras */
+    ;
 }
 
 /* Hover sobre links */
@@ -75,26 +100,64 @@ header p {
     font-size: 1.2rem;
 }
 
+.whatsapp-btn {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background: #25D366;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s;
+    z-index: 1100;
+}
 
+.whatsapp-btn:hover {
+    background: #1ebe57;
+}
 
-/* ===========================
-   Hero Section
-=========================== */
+.whatsapp-btn img {
+    margin-right: 0.5em;
+}
+
+.whatsapp-text {
+    display: inline-block;
+}
+
+/* Ocultar por defecto el botón móvil en escritorio */
+.mobile-only {
+    display: none;
+}
+
+/* Mostrar por defecto el botón escritorio */
+.desktop-only {
+    display: inline-block;
+}
+
+/* Hero Section */
 .hero-section {
-    background-image: url('img/consultorio.webp');
+    background-image: url('../img/consultorio.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 70vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    /* Centramos verticalmente */
     justify-content: center;
-    text-align: center;
-    color: white;
     position: relative;
+    padding: 2rem;
+    color: white;
 }
 
-/* Overlay semitransparente sobre hero */
+/* Overlay */
 .hero-section::before {
     content: "";
     position: absolute;
@@ -103,29 +166,135 @@ header p {
     z-index: 0;
 }
 
-/* Contenido dentro del hero */
+/* Contenedor */
 .hero-section>.container {
     position: relative;
     z-index: 1;
+    transform: translateY(-50px);
+    /* Subí o bajá este valor a gusto */
+}
+
+/* Alineación a la izquierda */
+.texto-izquierda {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 1000px;
+    /* Opcional: limita el ancho máximo */
+    padding-left: 3rem;
+    /* Corrido a la derecha */
+}
+
+/* Títulos */
+.bloque-titulo {
+    margin-bottom: 2rem;
+    /* Separación entre h1 y p */
+}
+
+/*TEXTO PRINCIPAL, ACA SE ARREGLA*/
+.hero-section h1.linea-hero {
+    font-size: 5rem !important;
+    font-weight: 700;
+    line-height: 0.9 !important;
+    margin-bottom: 0.2rem;
+
+}
+
+/*TEXTO SECUNDARIO, ACA SE ARREGLA*/
+.bloque-parrafo {
+    font-size: 1.2rem !important;
+    font-weight: 900;
+    line-height: 1.4 !important;
+}
+
+
+/* Línea decorativa */
+.linea-decorativa {
+    width: 500px;
+    /* Ancho de la línea */
+    height: 7px;
+    /* Grosor de la línea */
+    background-color: #8474A1;
+    /* Color de la línea */
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    transform: translateX(300px);
+    transition: all 0.3s ease;
+}
+
+/* Botón alineado a la derecha */
+.boton-consulta {
+    text-align: right;
+}
+
+.boton-consulta .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transform: translateX(300px);
 }
 
 /* ===========================
-   Secciones / Cards
+   Sección Nosotros
 =========================== */
-.cards-section {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
+#nosotros {
+
+    background-color: #065a5c;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* <-- cambia esto */
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 4rem; /* opcional: ajustá el espacio superior */
+    color: white;
+    overflow: hidden; /* Para que la imagen no se salga *
+    scroll-margin-top: 80px;
+    /* <-- Esta línea soluciona el problema **/
+    
+
 }
 
-/* Títulos generales del sitio */
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
+/* Imagen semitransparente */
+.fondo-imagen-nosotros {
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/equipo.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Ajustá la transparencia */
+    z-index: 0;
 }
+
+
+#nosotros h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #8474A1;
+}
+
+#nosotros p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #f9f6f1
+}
+
+
+.contenido-nosotros {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
 
 /* ===========================
    Footer
@@ -141,4 +310,88 @@ footer {
 footer a {
     color: #0d6efd;
     text-decoration: none;
+}
+
+
+
+/* ============================ */
+/* Estilos Responsive para Móviles */
+/* ============================ */
+@media (max-width: 480px) {
+    header .navbar-brand img {
+        padding-left: 1rem;
+        max-height: 50px;
+    }
+
+    .menu-centrado {
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        height: auto;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    header .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .navbar-nav .nav-item {
+        margin: 0.1rem 0;
+        /* más pegadas */
+    }
+
+    .whatsapp-btn {
+        right: 10px;
+        padding: 0.4em 0.7em;
+        font-size: 0.95em;
+        position: static;
+        width: auto;
+        justify-content: center;
+    }
+
+    .whatsapp-btn .whatsapp-text {
+        display: inline-block;
+        /* o block si preferís que esté debajo del ícono */
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 2rem;
+        /* esto lo baja suavemente */
+    }
+}
+
+/* ============================ */
+/* Estilos Responsive para Tablets */
+/* ============================ */
+@media (max-width: 768px) {
+    desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        width: 100%;
+    }
+
+    .whatsapp-btn {
+        position: static;
+        margin-top: 1rem;
+        justify-content: center;
+        width: auto;
+    }
+
+    .whatsapp-btn .whatsapp-text {
+        display: inline-block;
+        /* o block si preferís que esté debajo del ícono */
+    }
+
+
 }
