@@ -1,0 +1,144 @@
+/* ===========================
+   Estilos Generales del Sitio
+=========================== */
+
+/* Fuente principal para el cuerpo */
+body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   Header / Navbar
+=========================== */
+header {
+    background-color: #f9f6f1; /* <- este es el color que querés */
+    color: #000000;
+    padding: 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+/* Navbar interno, opcional si querés más control */
+header .navbar {
+    background-color: transparent; /* ya lo pintamos en el header */
+}
+
+/* Navbar centrado */
+header .navbar-collapse {
+    justify-content: center !important; /* centra horizontalmente los links */
+}
+
+/* Opcional: espacio entre links */
+header .navbar-nav .nav-item {
+    margin: 0 1rem; /* ajusta el espacio entre links */
+}
+
+/* Logo del header */
+header .navbar-brand img {
+    max-height: 70px;
+    /* tamaño del logo */
+}
+
+/* Links del header */
+header .nav-link {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    color: #065a5c;
+    transition: color 0.3s;
+    font-size: 1.2rem; /* <- ajusta este valor al tamaño que quieras */;
+}
+
+/* Hover sobre links */
+header .nav-link:hover {
+    color: #8474A1;
+}
+
+/* Link activo */
+header .nav-link.active {
+    color: #f9f6f1;
+    font-weight: 600;
+}
+
+/* Títulos dentro del header */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero-section {
+    background-image: url('img/consultorio.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Overlay semitransparente sobre hero */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Contenido dentro del hero */
+.hero-section>.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===========================
+   Secciones / Cards
+=========================== */
+.cards-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+/* Títulos generales del sitio */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Links del footer */
+footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
