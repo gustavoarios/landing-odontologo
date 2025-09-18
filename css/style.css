@@ -168,10 +168,14 @@ header p {
 
 /* Contenedor */
 .hero-section>.container {
+
     position: relative;
     z-index: 1;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 2rem;
     transform: translateY(-50px);
-    /* Subí o bajá este valor a gusto */
+
 }
 
 /* Alineación a la izquierda */
@@ -208,32 +212,34 @@ header p {
 }
 
 
+
 /* Línea decorativa */
 .linea-decorativa {
-    width: 500px;
-    /* Ancho de la línea */
+    width: 100%;
+    max-width: 500px;
     height: 7px;
-    /* Grosor de la línea */
     background-color: #8474A1;
-    /* Color de la línea */
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     margin-left: auto;
-    transform: translateX(300px);
+    margin-right: 0;
+    /* <-- esto la empuja a la derecha */
     transition: all 0.3s ease;
 }
 
 /* Botón alineado a la derecha */
 .boton-consulta {
+    width: 100%;
     text-align: right;
+    margin-top: 1rem;
 }
 
 .boton-consulta .btn {
     padding: 0.5rem 1.2rem;
     font-size: 1rem;
     border-radius: 5px;
-    transform: translateX(300px);
 }
+
 
 /* ===========================
    Sección Nosotros
@@ -246,28 +252,34 @@ header p {
     background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
-    align-items: flex-start; /* <-- cambia esto */
+    align-items: flex-start;
+    /* <-- cambia esto */
     justify-content: center;
     position: relative;
     padding: 2rem;
-    padding-top: 4rem; /* opcional: ajustá el espacio superior */
+    padding-top: 4rem;
+    /* opcional: ajustá el espacio superior */
     color: white;
-    overflow: hidden; /* Para que la imagen no se salga *
+    overflow: hidden;
+    /* Para que la imagen no se salga *
     scroll-margin-top: 80px;
     /* <-- Esta línea soluciona el problema **/
-    
+
 
 }
 
 /* Imagen semitransparente */
 .fondo-imagen-nosotros {
+
     position: absolute;
     inset: 0;
     background-image: url('../img/equipo.jpg');
     background-size: cover;
-    background-position: center;
-    opacity: 0.2; /* Ajustá la transparencia */
+    background-position: top;
+    /* <-- Esto alinea la imagen desde arriba */
+    opacity: 0.2;
     z-index: 0;
+
 }
 
 
@@ -372,7 +384,58 @@ footer a {
 /* Estilos Responsive para Tablets */
 /* ============================ */
 @media (max-width: 768px) {
-    desktop-only {
+    .hero-section {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-section > .container {
+        padding: 2rem 1rem;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .hero-section h1.linea-hero {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+        text-align: left;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    .bloque-parrafo {
+        font-size: 1rem !important;
+        text-align: left;
+        margin-top: 0rem;
+        margin-bottom: 4rem;
+    }
+
+    .texto-izquierda {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left;
+    }
+
+    .linea-decorativa {
+        margin-left: auto;
+        margin-right: 0;
+        text-align: right;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .boton-consulta {
+        text-align: right;
+        margin-top: 2rem;
+    }
+
+    .boton-consulta .btn {
+        margin-right: 0;
+    }
+
+    .desktop-only {
         display: none;
     }
 
@@ -390,8 +453,5 @@ footer a {
 
     .whatsapp-btn .whatsapp-text {
         display: inline-block;
-        /* o block si preferís que esté debajo del ícono */
     }
-
-
 }
