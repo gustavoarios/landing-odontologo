@@ -147,7 +147,7 @@ header p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 95vh;
     display: flex;
     align-items: center;
     /* Centramos verticalmente */
@@ -241,12 +241,56 @@ header p {
 }
 
 
+/* Flecha SVG */
+.chevron-container {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+}
+
+.chevron-svg {
+
+    width: 60px;
+    height: 60px;
+    fill: white;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.chevron-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+vron-link svg {
+    width: 40px;
+    height: 40px;
+    animation: bounce 2s infinite;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
 /* ===========================
    Sección Nosotros
 =========================== */
 #nosotros {
 
-    background-color: #065a5c;
+
+    background-color: #f9f6f1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -261,50 +305,101 @@ header p {
     /* opcional: ajustá el espacio superior */
     color: white;
     overflow: hidden;
-    /* Para que la imagen no se salga *
-    scroll-margin-top: 80px;
-    /* <-- Esta línea soluciona el problema **/
-
-
-}
-
-/* Imagen semitransparente */
-.fondo-imagen-nosotros {
-
-    position: absolute;
-    inset: 0;
-    background-image: url('../img/equipo.jpg');
-    background-size: cover;
-    background-position: top;
-    /* <-- Esto alinea la imagen desde arriba */
-    opacity: 0.2;
-    z-index: 0;
+    scroll-margin-top: 85px;
+    /* Ajustá este valor según la altura del header */
+    width: 100%;
+    flex-direction: column;
 
 }
 
 
 #nosotros h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #8474A1;
+    color: #065a5c;
 }
 
 #nosotros p {
-    font-size: 1.2rem;
-    max-width: 700px;
+    font-size: 1.5rem;
     margin: 0 auto;
     line-height: 1.6;
     font-weight: 400;
-    color: #f9f6f1
+    color: #8474A1
 }
 
 
 .contenido-nosotros {
     text-align: center;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
+
+.equipo-nosotros {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.miembro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    /* ✅ Evita que se apilen si hay espacio */
+    max-width: 1200px;
+    /* Podés ajustar este valor */
+    /* margin: 2rem auto 0; */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    justify-content: flex-start;
+    /* ✅ Asegura que no se centre */
+    margin: 2rem 0 0 0;
+    /* Eliminás el auto centrado */
+    margin-left: 4rem;
+    /* Ajustás cuánto lo querés correr */
+
+}
+
+.miembro img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+}
+
+.miembro .info {
+    flex: 1;
+    color: #8f3737;
+    margin-bottom: auto;
+    max-width: none; /* Asegura que pueda expandirse */
+    width: 100%; /* ✅ Asegura que use todo el espacio disponible */
+}
+
+.miembro h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: #065a5c;
+}
+
+
+#nosotros .miembro p {
+    font-size: 1.5rem;
+    color: #212529;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: none;
+}
+
+
 
 
 
@@ -389,7 +484,7 @@ footer a {
         padding-bottom: 2rem;
     }
 
-    .hero-section > .container {
+    .hero-section>.container {
         padding: 2rem 1rem;
         max-width: 100%;
         width: 100%;
@@ -454,4 +549,43 @@ footer a {
     .whatsapp-btn .whatsapp-text {
         display: inline-block;
     }
+
+
+    .chevron {
+        font-size: 2rem;
+    }
+
+    .chevron-container {
+        bottom: 120px;
+    }
+
+    .chevron-link svg,
+    .chevron-svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* ===========================
+       Sección Nosotro*/
+    #nosotros {
+        scroll-margin-top: 75px;
+    }
+
+    #nosotros p {
+        font-size: 1rem;
+        /* o probá con 0.9rem si querés más chico */
+    }
+
+    .miembro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .miembro img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+
 }
