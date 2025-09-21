@@ -25,6 +25,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1030;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .menu-centrado {
@@ -72,7 +73,8 @@ header .navbar-brand img {
 header .nav-link {
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
-    color: #065a5c;
+    /* color: #065a5c; */
+    color: #212529;
     transition: color 0.3s;
     font-size: 1.2rem;
     /* <- ajusta este valor al tamaño que quieras */
@@ -81,7 +83,8 @@ header .nav-link {
 
 /* Hover sobre links */
 header .nav-link:hover {
-    color: #8474A1;
+    /* color: #8474A1; */
+    color: #065a5c;
 }
 
 /* Link activo */
@@ -139,6 +142,17 @@ header p {
 /* Mostrar por defecto el botón escritorio */
 .desktop-only {
     display: inline-block;
+}
+
+section {
+    /* ... */
+    background: #fff;
+    /* obligatorio para que se vea la sombra */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* sombra suave debajo */
+    border-radius: 5px;
+    /* opcional, bordes redondeados */
+    padding: 40px 0;
 }
 
 /* Hero Section */
@@ -284,6 +298,28 @@ vron-link svg {
     }
 }
 
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.hero-section .bloque-titulo,
+.hero-section .bloque-parrafo {
+    opacity: 0;
+}
+
+.hero-section .bloque-titulo.animate-hero,
+.hero-section .bloque-parrafo.animate-hero {
+    animation: heroFadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
 /* ===========================
    Sección Nosotros
 =========================== */
@@ -301,8 +337,8 @@ vron-link svg {
     justify-content: center;
     position: relative;
     padding: 2rem;
-    padding-top: 4rem;
-    /* opcional: ajustá el espacio superior */
+    padding-top: 3rem;
+    /* opcional: ajustá el espacio superior de NOSOTROS*/
     color: white;
     overflow: hidden;
     scroll-margin-top: 85px;
@@ -314,18 +350,22 @@ vron-link svg {
 
 
 #nosotros h2 {
-    font-size: 3.5rem;
+    /*Nosotros titulo*/
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
     color: #065a5c;
 }
 
 #nosotros p {
-    font-size: 1.5rem;
+    /*Nosotros parrafo debajo de titulo NOSOTROS*/
+    font-size: 1.1rem;
     margin: 0 auto;
     line-height: 1.6;
     font-weight: 400;
-    color: #8474A1
+    color: #212529;
+
+    max-width: 1000px;
 }
 
 
@@ -353,20 +393,19 @@ vron-link svg {
     max-width: 1200px;
     /* Podés ajustar este valor */
     /* margin: 2rem auto 0; */
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     padding: 1.5rem;
     border-radius: 12px;
     justify-content: flex-start;
     /* ✅ Asegura que no se centre */
-    margin: 2rem 0 0 0;
-    /* Eliminás el auto centrado */
-    margin-left: 4rem;
-    /* Ajustás cuánto lo querés correr */
+    margin: 0;
+    /* margin-left: 0; */
+    /* Ajustás cuánto lo querés correr al miembro dentro del wrapper */
 
 }
 
 .miembro img {
-    width: 350px;
+    width: 250px;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -378,25 +417,113 @@ vron-link svg {
     flex: 1;
     color: #8f3737;
     margin-bottom: auto;
-    max-width: none; /* Asegura que pueda expandirse */
-    width: 100%; /* ✅ Asegura que use todo el espacio disponible */
+    max-width: none;
+    /* Asegura que pueda expandirse */
+    width: 100%;
+    /* ✅ Asegura que use todo el espacio disponible */
 }
 
 .miembro h3 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
     color: #065a5c;
+}
+
+.matricula-titulo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #1976a3;
+    margin: 0 0 0.5em 0;
+    letter-spacing: 0.02em;
+}
+
+.miembro-wrapper {
+    background: #f9f6f1;
+    /* color del recuadro */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    /* sombra */
+    border-radius: 16px;
+    /* bordes redondeados */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    /* distancia desde arriba */
+    margin-bottom: 2em;
+    /* distancia desde abajo */
+    padding: 0em;
+    /* espacio interno */
+    max-width: 1200px;
+    /* ancho máximo */
+    width: auto;
+    /* ancho automático */
+    position: center;
+    /* permite mover con top/left si lo necesitás */
+}
+
+.miembros-fila {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.miembros-fila .miembro {
+    background: #C2B7B5 !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 1.5rem;
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1 !important;
+}
+
+.miembros-fila .miembro img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.miembros-fila .info {
+    text-align: center;
 }
 
 
 #nosotros .miembro p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #212529;
     line-height: 1.8;
     margin-bottom: 0.5rem;
     width: 100%;
     max-width: none;
+    margin-top: 2em;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(540px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.miembros-fila .miembro {
+    opacity: 0;
+    transition: opacity 2s, transform 0.8s;
+}
+
+.miembros-fila .miembro.animate-up {
+    animation: fadeInUp 2.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+
 }
 
 
