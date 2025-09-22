@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odontología General</title>
+    <title>Home - Dr. Sofia Mora</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo-head.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -35,7 +38,7 @@
                     <ul class="navbar-nav text-center">
                         <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cobertura">Cobertura</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                     </ul>
                     <!-- Botón de WhatsApp para móvil (dentro del menú colapsable) -->
@@ -240,75 +243,129 @@
 
     </section>
 
-    <!-- Especialidades
-    <section id="especialidades">
-        <h2>Especialidades</h2>
-        <p>Descripción de las especialidades que ofreces.</p>
+    <!-- Sección Cobertura con imagen de fondo -->
+    <section id="cobertura">
+        <div class="contenido-cobertura">
+            <h2>Cobertura</h2>
+            <p>
+                Consultá el alcance de tu plan de cobertura para obra social o prepaga.<br>
+                <em>*La cobertura puede ser modificada por el prestador.</em>
+            </p>
+        </div>
+        <div class="cobertura-botones">
+            <button class="btn-cobertura" id="btn-consultas" type="button">Consultas</button>
+            <button class="btn-cobertura" id="btn-guardia" type="button">Guardia 24/7</button>
+            <button class="btn-cobertura" id="btn-estudios" type="button">Intervenciones quirúrgicas</button>
+        </div>
 
-    </section> -->
+        <div class="cobertura-contenidos">
+            <div class="contenido-cobertura" data-cobertura="consultas">
+                <p><strong>OSDE:</strong> 2 consultas al año (con copago mínimo)</p>
+                <p><strong>Swiss Medical:</strong> 3 consultas al año (hasta 4 según plan)</p>
+                <p><strong>Galeno:</strong> 2 a 3 consultas al año, depende del plan</p>
+                <p><strong>OMINT:</strong> 3 consultas al año (plan básico), más en planes superiores</p>
+                <p><strong>Medifé:</strong> 2 consultas al año (copago reducido)</p>
+                <p><strong>Sancor Salud:</strong> 2 consultas al año, ampliable según plan</p>
+                <p><strong>Prevención Salud:</strong> 3 consultas al año en cartilla</p>
+                <p><strong>Federada Salud:</strong> 2 consultas al año, con posibilidad de reintegros</p>
+                <p><strong>IOMA:</strong> 2 consultas al año en hospitales y clínicas de cartilla</p>
+                <p><strong>PAMI:</strong> 2 consultas anuales sin costo</p>
+                <p><strong>Accord Salud:</strong> 2 consultas al año (planes altos ofrecen más)</p>
+                <p><strong>Hospital Italiano Prepaga:</strong> 3 consultas al año en consultorios propios</p>
+                <p><strong>Hospital Británico Prepaga:</strong> 3 consultas anuales, depende del plan</p>
+                <p><strong>IOSFA:</strong> 2 consultas al año para titulares, ampliable a familiares</p>
+                <p><strong>OSDEPYM:</strong> 2 consultas al año en cartilla nacional</p>
+            </div>
 
-    <section id="testimonios">
-        <h2>Testimonios</h2>
-        <p>Lo que dicen tus clientes.</p>
+            <div class="contenido-cobertura" data-cobertura="guardia">
+                <p><strong>OSDE:</strong> Guardia 24/7 en sanatorios de cartilla (con copago según plan)</p>
+                <p><strong>Swiss Medical:</strong> Urgencias cubiertas 365 días (algunos planes sin copago)</p>
+                <p><strong>Galeno:</strong> Guardia odontológica y médica 24 horas en red propia</p>
+                <p><strong>OMINT:</strong> Atención de emergencias 24/7 (incluye servicio de ambulancia en planes altos)
+                </p>
+                <p><strong>Medifé:</strong> Cobertura de guardia con copago reducido en clínicas adheridas</p>
+                <p><strong>Sancor Salud:</strong> Guardia 24 hs en todo el país (puede requerir autorización)</p>
+                <p><strong>Prevención Salud:</strong> Atención de urgencias sin límite, con coseguro</p>
+                <p><strong>Federada Salud:</strong> Guardia médica y odontológica con cobertura parcial</p>
+                <p><strong>IOMA:</strong> Guardia 24 hs en hospitales públicos y privados de cartilla</p>
+                <p><strong>PAMI:</strong> Emergencias y guardias médicas cubiertas en prestadores asignados</p>
+                <p><strong>Accord Salud:</strong> Guardia las 24 horas, cobertura total en planes superiores</p>
+                <p><strong>Hospital Italiano Prepaga:</strong> Guardia médica y odontológica en sede central 24/7</p>
+                <p><strong>Hospital Británico Prepaga:</strong> Emergencias cubiertas en sede central y sanatorios
+                    asociados</p>
+                <p><strong>IOSFA:</strong> Guardia permanente en hospitales militares y convenios privados</p>
+                <p><strong>OSDEPYM:</strong> Emergencias cubiertas en sanatorios de cartilla nacional</p>
+            </div>
+
+            <div class="contenido-cobertura" data-cobertura="estudios">
+                <p><strong>OSDE:</strong> Radiografías digitales cubiertas al 100%, tomografías con autorización</p>
+                <p><strong>Swiss Medical:</strong> Estudios de diagnóstico por imágenes cubiertos (copago según plan)
+                </p>
+                <p><strong>Galeno:</strong> Radiografías y panorámicas cubiertas, tomografías con coseguro</p>
+                <p><strong>OMINT:</strong> Estudios básicos al 100%, tomografías y resonancias con autorización previa
+                </p>
+                <p><strong>Medifé:</strong> Radiografías simples incluidas, estudios complejos con copago reducido</p>
+                <p><strong>Sancor Salud:</strong> Cobertura de imágenes diagnósticas, hasta 3 estudios avanzados al año
+                </p>
+                <p><strong>Prevención Salud:</strong> Estudios por imágenes incluidos, con límite anual según plan</p>
+                <p><strong>Federada Salud:</strong> Radiografías cubiertas en cartilla, tomografías con coseguro</p>
+                <p><strong>IOMA:</strong> Cobertura en estudios básicos y especializados en hospitales y clínicas
+                    asociadas</p>
+                <p><strong>PAMI:</strong> Radiografías odontológicas incluidas, estudios avanzados con derivación</p>
+                <p><strong>Accord Salud:</strong> Estudios cubiertos al 100% en cartilla, con autorización para alta
+                    complejidad</p>
+                <p><strong>Hospital Italiano Prepaga:</strong> Radiografías, panorámicas y tomografías en sedes propias
+                </p>
+                <p><strong>Hospital Británico Prepaga:</strong> Estudios de imágenes cubiertos, con prioridad en sus
+                    centros</p>
+                <p><strong>IOSFA:</strong> Estudios de diagnóstico cubiertos en hospitales militares y cartilla privada
+                </p>
+                <p><strong>OSDEPYM:</strong> Radiografías incluidas, estudios de mayor complejidad con coseguro</p>
+            </div>
+
+
+
+
+        </div>
     </section>
+
+    <!-- Sección Contacto -->
 
     <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Formulario o datos de contacto.</p>
-    </section>
+        <div class="contenido-contacto">
+            <h2>Contacto</h2>
+            <p>
+                Estamos a tu disposición para responder consultas, brindarte asesoramiento y coordinar turnos. Podés
+                comunicarte con nosotros a través del formulario, por teléfono o visitándonos en nuestro consultorio.
+            </p>
+        </div>
 
-
-    <!-- Sección media -->
-    <section id="servicios" class="cards-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Nuestros Servicios</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Servicio 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicio 1</h5>
-                            <p class="card-text">Descripción breve y atractiva de lo que ofrecemos en este servicio.
-                            </p>
-                            <a href="#" class="btn btn-primary">Saber Más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Servicio 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicio 2</h5>
-                            <p class="card-text">Otra descripción interesante para captar la atención de tus
-                                clientes.
-                            </p>
-                            <a href="#" class="btn btn-primary">Saber Más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Servicio 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Servicio 3</h5>
-                            <p class="card-text">Un servicio más, destacando lo que nos hace diferentes y únicos.
-                            </p>
-                            <a href="#" class="btn btn-primary">Saber Más</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="contacto-info-mapa">
+            <div class="contacto-datos">
+                <h3>Datos de contacto</h3>
+                <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@odontologia.com">info@odontologia.com</a></p>
+                <p><strong>Dirección:</strong> Av. Bartolomé Mitre y Las Flores, Wilde</p>
+            </div>
+            <div class="contacto-mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.044692818647!2d-58.32013202514063!3d-34.704052662802454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33265d2b3269b%3A0x3f34a3806bc5d57a!2sAvenida%20Bartolom%C3%A9%20Mitre%20%26%20Las%20Flores%2C%20B1875%20Wilde%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1758581118316!5m2!1ses-419!2sar"
+                    width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
+
+
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
-            <p>Síguenos en:
-                <a href="#">Facebook</a> |
+            <p>&copy; 2025 - Odontología General Dr. Sofia Mora. Todos los derechos reservados.</p>
+            <!-- <p>Síguenos en: -->
+                <!-- <a href="#">Facebook</a> |
                 <a href="#">Instagram</a> |
-                <a href="#">LinkedIn</a>
+                <a href="#">LinkedIn</a> -->
             </p>
         </div>
     </footer>
@@ -337,6 +394,38 @@
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelector('.hero-section .bloque-titulo').classList.add('animate-hero');
             document.querySelector('.hero-section .bloque-parrafo').classList.add('animate-hero');
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Oculta todos los contenidos
+            function ocultarTodos() {
+                document.querySelectorAll('.contenido-cobertura[data-cobertura]').forEach(function (div) {
+                    div.style.display = 'none';
+                });
+            }
+
+            // Muestra el contenido correspondiente
+            function mostrarContenido(tipo) {
+                ocultarTodos();
+                var div = document.querySelector('.contenido-cobertura[data-cobertura="' + tipo + '"]');
+                if (div) div.style.display = 'block';
+            }
+
+            // Asigna eventos a los botones
+            document.getElementById('btn-consultas').addEventListener('click', function () {
+                mostrarContenido('consultas');
+            });
+            document.getElementById('btn-guardia').addEventListener('click', function () {
+                mostrarContenido('guardia');
+            });
+            document.getElementById('btn-estudios').addEventListener('click', function () {
+                mostrarContenido('estudios');
+            });
+
+            // Opcional: oculta todos al cargar
+            ocultarTodos();
         });
     </script>
 </body>

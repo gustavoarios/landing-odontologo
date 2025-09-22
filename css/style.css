@@ -179,7 +179,7 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 0;
 }
 
@@ -194,6 +194,8 @@ section {
     transform: translateY(-50px);
 
 }
+
+
 
 /* Alineación a la izquierda */
 .texto-izquierda {
@@ -587,7 +589,8 @@ vron-link svg {
     margin: 0 auto 2em auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 0em; /* probá con 0.5em o 0 si querés menos espacio */
+    margin-bottom: 0em;
+    /* probá con 0.5em o 0 si querés menos espacio */
 }
 
 .urgencia-destacada {
@@ -658,6 +661,7 @@ vron-link svg {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
+    margin-bottom: 2em;
     flex-wrap: wrap;
     width: 100%;
 
@@ -701,6 +705,306 @@ vron-link svg {
     transition: transform 0.2s, box-shadow 0.2s;
     z-index: 2;
 }
+
+/* ===========================
+   Sección Testimonios
+=========================== */
+#testimonios {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    color: #212529;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    width: 100%;
+    flex-direction: column;
+}
+
+#testimonios h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+}
+
+#testimonios p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+    max-width: 1000px;
+}
+
+.contenido-testimonios {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+}
+
+/* ===========================
+   Sección Cobertura
+=========================== */
+#cobertura {
+    background-color: #fff;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    /* <-- cambia esto */
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    /* opcional: ajustá el espacio superior de COBERTURA*/
+    color: white;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    /* Ajustá este valor según la altura del header */
+    width: 100%;
+    flex-direction: column;
+    background-image: url('../img/prepagas.png');
+    /* o la imagen que quieras */
+}
+
+#cobertura::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Ajustá la opacidad y color para la transparencia */
+    z-index: 0;
+}
+
+#cobertura>* {
+    position: relative;
+    z-index: 1;
+}
+
+#cobertura h2 {
+    /*Cobertura titulo*/
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+}
+
+#cobertura p {
+    /*Cobertura parrafo debajo de titulo COBERTURA*/
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+}
+
+.cobertura-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cobertura-header span {
+    width: 16px;
+    height: 16px;
+    background: #FFC400;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cobertura-descripcion p {
+    color: #065a5c;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.cobertura-descripcion em {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.cobertura-botones {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+.btn-cobertura {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 32px;
+    padding: 0.7em 2.2em;
+    border: 2px solid #065a5c;
+    background: #fff;
+    color: #065a5c;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    outline: none;
+}
+
+.btn-cobertura.active,
+.btn-cobertura:focus {
+    background: #f9f6f1;
+    color: #212529;
+    border-color: #065a5c;
+}
+
+.btn-cobertura:hover {
+    background: #f9f6f1;
+    color: #065a5c;
+}
+
+.cobertura-contenidos {
+    max-width: 1200px;
+    margin: 0 auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cobertura-contenidos.activo {
+    max-height: 2000px;
+    /* Un valor suficientemente grande para el contenido */
+}
+
+.contenido-cobertura {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #212529;
+    margin-bottom: 0em;
+    margin: 0 auto;
+}
+
+/* Elimina el espacio entre los p de .contenido-cobertura */
+.contenido-cobertura p {
+    margin-bottom: 0.5rem !important;
+
+}
+
+/* ===========================
+   Sección Contacto
+=========================== */
+
+#contacto {
+    background-color: #f9f6f1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0 2rem 0;
+    padding-top: 3rem;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    width: 100%;
+    flex-direction: column;
+}
+
+#contacto h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+    text-align: center;
+}
+
+#contacto p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.contenido-contacto {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.contacto-info-mapa {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px; /* o el valor que prefieras */
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.contacto-datos {
+    flex: 1 1 300px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    margin-top: 2rem;
+}
+
+.contacto-datos h3 {
+    color: #065a5c;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    text-align: center;
+
+}
+
+.contacto-datos p {
+    font-size: 1rem;
+    margin-bottom: 0.7em;
+    color: #212529;
+}
+
+.contacto-datos a {
+    color: #065a5c;
+    text-decoration: none;
+}
+
+.contacto-mapa {
+    flex: 2 1 400px;
+    min-width: 280px;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+}
+
+.contacto-mapa iframe {
+    width: 100%;
+    height: 480px;
+    border: 0;
+    display: block;
+}
+
 
 /* ===========================
    Footer
@@ -886,5 +1190,27 @@ footer a {
     }
 
 
+    /* ===========================
+       Sección Contacto*/
 
+    .contacto-info-mapa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-mapa {
+        max-width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .contacto-info-mapa {
+        flex-direction: column;
+        /* columna en pantallas chicas */
+        align-items: center;
+    }
+
+    .contacto-mapa {
+        max-width: 100%;
+        margin-top: 1.5rem;
+    }
 }
