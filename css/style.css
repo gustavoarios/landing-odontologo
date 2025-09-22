@@ -546,7 +546,7 @@ vron-link svg {
     justify-content: center;
     position: relative;
     padding: 2rem;
-    padding-top: 3rem;
+    padding-top: 0rem;
     /* opcional: ajustá el espacio superior de NOSOTROS*/
     color: white;
     overflow: hidden;
