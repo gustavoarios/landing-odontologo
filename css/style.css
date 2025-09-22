@@ -441,7 +441,7 @@ vron-link svg {
 }
 
 .miembro-wrapper {
-    background: #f9f6f1;
+    background: #fff;
     /* color del recuadro */
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
     /* sombra */
@@ -535,7 +535,7 @@ vron-link svg {
 #especialidades {
 
 
-    background-color: #f9f6f1;
+    background-color: #fff;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -546,7 +546,7 @@ vron-link svg {
     justify-content: center;
     position: relative;
     padding: 2rem;
-    padding-top: 0rem;
+    padding-top: 3rem;
     /* opcional: ajustá el espacio superior de NOSOTROS*/
     color: white;
     overflow: hidden;
@@ -573,11 +573,69 @@ vron-link svg {
     line-height: 1.6;
     font-weight: 400;
     color: #212529;
-
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
     max-width: 1000px;
 }
 
+/* Bloque destacado de Atención de Urgencias */
+.urgencia-destacada-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2em auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0em; /* probá con 0.5em o 0 si querés menos espacio */
+}
 
+.urgencia-destacada {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 0rem;
+}
+
+.urgencia-destacada:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+}
+
+.urgencia-img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 2em;
+}
+
+.urgencia-info {
+    flex: 1;
+}
+
+.urgencia-titulo {
+    color: #065a5c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.urgencia-descripcion {
+    font-size: 1em;
+    color: #333;
+}
+
+/*cards especialidades*/
 .contenido-especialidades {
     text-align: center;
     max-width: 100%;
@@ -593,9 +651,56 @@ vron-link svg {
     padding-top: 2rem;
 }
 
+.especialidades-fila {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    width: 100%;
 
+}
 
+.especialidad-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.especialidad-card img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.especialidad-card h4 {
+    color: #065a5c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.especialidad-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+.especialidad-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 2;
+}
 
 /* ===========================
    Footer
