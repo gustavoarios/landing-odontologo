@@ -1227,6 +1227,22 @@ footer a {
     }
 
     /* ===========================
+       Sección Cobertura*/
+
+    .cobertura-botones {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        /* Los botones ocupan todo el ancho */
+        gap: 12px;
+        /* Espacio entre botones */
+    }
+
+    .btn-cobertura {
+        width: 100%;
+    }
+
+    /* ===========================
        Sección Contacto*/
 
     .contacto-info-mapa {
