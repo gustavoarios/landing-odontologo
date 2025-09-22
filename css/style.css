@@ -68,6 +68,9 @@ header .navbar-brand img {
 /*colores*/
 /*color nombre profesional: #065a5c*/
 /*color logo diente: #8474A1*/
+/*color fondo header: #f9f6f1*/
+/*color links header: #212529*/
+/*color fondo secciones: #053D58*/
 
 /* Links del header */
 header .nav-link {
@@ -524,6 +527,70 @@ vron-link svg {
 .miembros-fila .miembro.animate-up {
     animation: fadeInUp 2.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 
+}
+
+/* ===========================
+   Sección Especialidades
+=========================== */
+#especialidades {
+
+
+    background-color: #f9f6f1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    /* <-- cambia esto */
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    /* opcional: ajustá el espacio superior de NOSOTROS*/
+    color: white;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    /* Ajustá este valor según la altura del header */
+    width: 100%;
+    flex-direction: column;
+
+}
+
+
+#especialidades h2 {
+    /*Especialidades titulo*/
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+}
+
+#especialidades p {
+    /*Especialidades parrafo debajo de titulo ESPECIALIDADES*/
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+
+    max-width: 1000px;
+}
+
+
+.contenido-especialidades {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.equipo-especialidades {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 2rem;
 }
 
 
