@@ -1089,10 +1089,10 @@ footer a {
 /* ============================ */
 @media (max-width: 768px) {
 
-    html {
+    /* html {
         scroll-padding-top: 56px;
         /* Altura navbar móvil, ajusta según tu diseño */
-    }
+    } */
     .hero-section {
         padding-top: 3rem;
         padding-bottom: 2rem;

@@ -374,6 +374,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 
+            <script>
+                    // Scroll correcto solo en móvil después de cerrar el menú hamburguesa
+                    document.addEventListener("DOMContentLoaded", function () {
+                        document.querySelectorAll('.navbar-nav .nav-link[href^="#"]').forEach(function(link) {
+                            link.addEventListener('click', function(e) {
+                                var navbarCollapse = document.querySelector('.navbar-collapse');
+                                var isMobile = window.innerWidth <= 600;
+                                var isOpen = navbarCollapse && navbarCollapse.classList.contains('show');
+                                if (isMobile && isOpen) {
+                                    e.preventDefault();
+                                    var bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                                    bsCollapse.hide();
+                                    setTimeout(function() {
+                                        var targetId = link.getAttribute('href');
+                                        var target = document.querySelector(targetId);
+                                        if (target) {
+                                            var header = document.querySelector('header');
+                                            var headerHeight = header ? header.offsetHeight : 0;
+                                            window.scrollTo({
+                                                top: target.offsetTop - headerHeight,
+                                                behavior: 'smooth'
+                                            });
+                                        }
+                                    }, 400);
+                                }
+                            });
+                        });
+                    });
+            </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const miembros = document.querySelectorAll('.miembros-fila .miembro');
