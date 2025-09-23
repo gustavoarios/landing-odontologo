@@ -1230,66 +1230,70 @@ footer a {
         max-width: 220px;
         /* Ajusta el tamaño máximo si lo deseas */
         margin-bottom: 16px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
+}
 
-    .urgencia-info {
-        width: 100%;
-    }
+.urgencia-info {
+    width: 100%;
+}
 
-    .animate-up {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
+.animate-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
 
 
 
-    /* ===========================
+/* ===========================
        Sección Cobertura*/
 
-    #cobertura {
-        background-image: url('../img/prepagas.png');
-        /* Cambia por tu imagen */
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        /* Mantiene la imagen fija */
-    }
+#cobertura {
+    background-image: url('../img/prepagas.png');
+    /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Mantiene la imagen fija */
+}
 
-    .cobertura-botones {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        /* Los botones ocupan todo el ancho */
-        gap: 12px;
-        /* Espacio entre botones */
-    }
+.cobertura-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* Los botones ocupan todo el ancho */
+    gap: 12px;
+    /* Espacio entre botones */
+}
 
-    .btn-cobertura {
-        width: 100%;
-    }
+.btn-cobertura {
+    width: 100%;
+}
 
-    /* ===========================
+/* ===========================
        Sección Contacto*/
 
-    .contacto-info-mapa {
-        flex-direction: column;
-        align-items: center;
-    }
+.contacto-info-mapa {
+    flex-direction: column;
+    align-items: center;
+}
 
-    .contacto-mapa {
-        max-width: 100%;
-        margin-top: 1.5rem;
-    }
+.contacto-mapa {
+    max-width: 100%;
+    margin-top: 1.5rem;
+}
 
-    .contacto-info-mapa {
-        flex-direction: column;
-        /* columna en pantallas chicas */
-        align-items: center;
-    }
+.contacto-info-mapa {
+    flex-direction: column;
+    /* columna en pantallas chicas */
+    align-items: center;
+}
 
-    .contacto-mapa {
-        max-width: 100%;
-        margin-top: 1.5rem;
-    }
+.contacto-mapa {
+    max-width: 100%;
+    margin-top: 1.5rem;
+}
 }
