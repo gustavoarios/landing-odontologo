@@ -1308,6 +1308,22 @@ footer a {
     .contacto-mapa {
         max-width: 100%;
         margin-top: 0;
+
+        padding: 0;
+        box-shadow: none;
+        /* opcional, si no quieres sombra */
+        background: none;
+        /* opcional, si no quieres fondo */
+        height: 320px;
+        /* igual que el iframe */
+    }
+
+    .contacto-mapa iframe {
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+        /* si quieres bordes redondeados */
+        display: block;
     }
 
     .ubicacion-movil {
