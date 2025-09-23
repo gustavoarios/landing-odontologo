@@ -1290,6 +1290,13 @@ footer a {
         margin-top: 1.5rem;
     }
 
+    .contacto-datos {
+        width: 90%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .contacto-info-mapa {
         flex-direction: column;
         /* columna en pantallas chicas */
