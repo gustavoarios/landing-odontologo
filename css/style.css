@@ -1226,8 +1226,23 @@ footer a {
         width: 100%;
     }
 
+    .animate-up {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+
+
     /* ===========================
        Sección Cobertura*/
+
+    #cobertura {
+    background-image: url('../img/prepagas.png'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene la imagen fija */
+  }
 
     .cobertura-botones {
         display: flex;
