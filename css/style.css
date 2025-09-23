@@ -1029,6 +1029,11 @@ footer a {
 /* Estilos Responsive para Móviles */
 /* ============================ */
 @media (max-width: 480px) {
+    html {
+        scroll-padding-top: 56px;
+        /* Altura navbar móvil, ajusta según tu diseño */
+    }
+
     header .navbar-brand img {
         padding-left: 1rem;
         max-height: 50px;
@@ -1238,11 +1243,13 @@ footer a {
        Sección Cobertura*/
 
     #cobertura {
-    background-image: url('../img/prepagas.png'); /* Cambia por tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Mantiene la imagen fija */
-  }
+        background-image: url('../img/prepagas.png');
+        /* Cambia por tu imagen */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        /* Mantiene la imagen fija */
+    }
 
     .cobertura-botones {
         display: flex;
