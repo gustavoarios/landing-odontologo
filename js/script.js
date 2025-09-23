@@ -1,17 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
   const navbarCollapse = document.getElementById('navbarNav');
   const navbarToggler = document.querySelector('.navbar-toggler');
-
-  // Cerrar el menú al hacer clic en un enlace
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false
-      });
-      bsCollapse.hide();
-    });
-  });
 
   // Cerrar el menú al hacer clic fuera de él
   document.addEventListener('click', (event) => {
