@@ -1029,10 +1029,10 @@ footer a {
 /* Estilos Responsive para Móviles */
 /* ============================ */
 @media (max-width: 480px) {
-    html {
+    /* html {
         scroll-padding-top: 56px;
         /* Altura navbar móvil, ajusta según tu diseño */
-    }
+    */
 
     header .navbar-brand img {
         padding-left: 1rem;
@@ -1084,6 +1084,7 @@ footer a {
     }
 }
 
+
 /* ============================ */
 /* Estilos Responsive para Tablets */
 /* ============================ */
@@ -1092,7 +1093,7 @@ footer a {
     /* html {
         scroll-padding-top: 56px;
         /* Altura navbar móvil, ajusta según tu diseño */
-    } */
+ 
     .hero-section {
         padding-top: 3rem;
         padding-bottom: 2rem;
