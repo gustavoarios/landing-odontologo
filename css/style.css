@@ -1006,6 +1006,10 @@ vron-link svg {
     display: block;
 }
 
+.ubicacion-movil {
+    display: none;
+}
+
 
 /* ===========================
    Footer
@@ -1088,10 +1092,6 @@ footer a {
 /* Estilos Responsive para Tablets */
 /* ============================ */
 @media (max-width: 768px) {
-
-    /* html {
-        scroll-padding-top: 56px;
-        /* Altura navbar móvil, ajusta según tu diseño */
 
     .hero-section {
         padding-top: 3rem;
@@ -1287,12 +1287,13 @@ footer a {
 
     .contacto-mapa {
         max-width: 100%;
-        margin-top: 1.5rem;
+        margin-top: 0;
     }
 
     .contacto-datos {
         width: 90%;
         max-width: 320px;
+        max-height: fit-content;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1301,10 +1302,21 @@ footer a {
         flex-direction: column;
         /* columna en pantallas chicas */
         align-items: center;
+
     }
 
     .contacto-mapa {
         max-width: 100%;
-        margin-top: 1.5rem;
+        margin-top: 0;
+    }
+
+    .ubicacion-movil {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #065a5c;
+        margin-bottom: 0rem;
+        padding: auto;
+
     }
 }

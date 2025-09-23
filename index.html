@@ -347,7 +347,10 @@
                 <p><strong>Email:</strong> <a href="mailto:info@odontologia.com">info@odontologia.com</a></p>
                 <p><strong>Dirección:</strong> Av. Bartolomé Mitre y Las Flores, Wilde</p>
             </div>
+
+            <h3 class="ubicacion-movil">Nuestra ubicación</h3>
             <div class="contacto-mapa">
+                
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.044692818647!2d-58.32013202514063!3d-34.704052662802454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33265d2b3269b%3A0x3f34a3806bc5d57a!2sAvenida%20Bartolom%C3%A9%20Mitre%20%26%20Las%20Flores%2C%20B1875%20Wilde%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1758581118316!5m2!1ses-419!2sar"
                     width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
@@ -363,7 +366,7 @@
         <div class="container">
             <p>&copy; 2025 - Odontología General Dr. Sofia Mora. Todos los derechos reservados.</p>
             <!-- <p>Síguenos en: -->
-                <!-- <a href="#">Facebook</a> |
+            <!-- <a href="#">Facebook</a> |
                 <a href="#">Instagram</a> |
                 <a href="#">LinkedIn</a> -->
             </p>
@@ -374,35 +377,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 
-            <script>
-                    // Scroll correcto solo en móvil después de cerrar el menú hamburguesa
-                    document.addEventListener("DOMContentLoaded", function () {
-                        document.querySelectorAll('.navbar-nav .nav-link[href^="#"]').forEach(function(link) {
-                            link.addEventListener('click', function(e) {
-                                var navbarCollapse = document.querySelector('.navbar-collapse');
-                                var isMobile = window.innerWidth <= 600;
-                                var isOpen = navbarCollapse && navbarCollapse.classList.contains('show');
-                                if (isMobile && isOpen) {
-                                    e.preventDefault();
-                                    var bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
-                                    bsCollapse.hide();
-                                    setTimeout(function() {
-                                        var targetId = link.getAttribute('href');
-                                        var target = document.querySelector(targetId);
-                                        if (target) {
-                                            var header = document.querySelector('header');
-                                            var headerHeight = header ? header.offsetHeight : 0;
-                                            window.scrollTo({
-                                                top: target.offsetTop - headerHeight,
-                                                behavior: 'smooth'
-                                            });
-                                        }
-                                    }, 400);
-                                }
-                            });
-                        });
-                    });
-            </script>
+    <script>
+        // Scroll correcto solo en móvil después de cerrar el menú hamburguesa
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.navbar-nav .nav-link[href^="#"]').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    var navbarCollapse = document.querySelector('.navbar-collapse');
+                    var isMobile = window.innerWidth <= 600;
+                    var isOpen = navbarCollapse && navbarCollapse.classList.contains('show');
+                    if (isMobile && isOpen) {
+                        e.preventDefault();
+                        var bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                        bsCollapse.hide();
+                        setTimeout(function () {
+                            var targetId = link.getAttribute('href');
+                            var target = document.querySelector(targetId);
+                            if (target) {
+                                var header = document.querySelector('header');
+                                var headerHeight = header ? header.offsetHeight : 0;
+                                window.scrollTo({
+                                    top: target.offsetTop - headerHeight,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }, 400);
+                    }
+                });
+            });
+        });
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
